@@ -1,0 +1,759 @@
+[{
+  "_id": 14,
+  "title": "The Silence of the Lambs",
+  "year": 1991,
+  "genre": [
+    "Crime",
+    "Drama",
+    "Thriller"
+  ],
+  "rating": 8.6,
+  "director": "Jonathan Demme",
+  "actors": [
+    "Jodie Foster",
+    "Anthony Hopkins",
+    "Lawrence A. Bonney"
+  ],
+  "plot": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+  "trailer": "https://youtu.be/6iB21hsprAQ?si=7NWA3Xyc2ZBVhRzw",
+  "runtime": 118,
+  "awards": "Won 5 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$272.7 million",
+  "views": 272773128,
+  "production": "Orion Pictures",
+  "website": "https://www.mgm.com/movies/the-silence-of-the-lambs",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Silence_of_the_Lambs.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 1,
+  "title": "The Shawshank Redemption",
+  "year": 1994,
+  "genre": [
+    "Drama"
+  ],
+  "rating": 9.3,
+  "director": "Frank Darabont",
+  "actors": [
+    "Tim Robbins",
+    "Morgan Freeman"
+  ],
+  "plot": "Two imprisoned men bond over several years, finding solace and eventual redemption through acts of common decency.",
+  "poster": "",
+  "trailer": "https://youtu.be/PLl99DlL6b4?si=hiV1NpMxEB8WbzkA",
+  "runtime": 142,
+  "awards": "Nominated for 7 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$28.3 million",
+  "views": 28373128,
+  "production": "Columbia Pictures",
+  "website": "http://www.warnerbros.com/movies/shawshank-redemption",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Shawshank_Redemption.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 17,
+  "title": "The Prestige",
+  "year": 2006,
+  "genre": [
+    "Drama",
+    "Mystery",
+    "Sci-Fi"
+  ],
+  "rating": 8.5,
+  "director": "Christopher Nolan",
+  "actors": [
+    "Christian Bale",
+    "Hugh Jackman",
+    "Scarlett Johansson"
+  ],
+  "plot": "After a tragic accident, two stage magicians engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.",
+  "poster": "",
+  "trailer": "https://youtu.be/ijXruSzfGEc",
+  "runtime": 130,
+  "awards": "Nominated for 2 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$109.7 million",
+  "views": 109742983,
+  "production": "Warner Bros. Pictures",
+  "website": "https://www.warnerbros.com/movies/prestige",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Prestige.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 7,
+  "title": "The Matrix",
+  "year": 1999,
+  "genre": [
+    "Action",
+    "Sci-Fi"
+  ],
+  "rating": 8.7,
+  "director": "Lana Wachowski, Lilly Wachowski",
+  "actors": [
+    "Keanu Reeves",
+    "Laurence Fishburne",
+    "Carrie-Anne Moss"
+  ],
+  "plot": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+  "poster": "",
+  "trailer": "https://youtu.be/m8e-FF8MsqU",
+  "runtime": 136,
+  "awards": "Won 4 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$463.5 million",
+  "views": 463592321,
+  "production": "Warner Bros. Pictures",
+  "website": "https://www.warnerbros.com/movies/matrix",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Matrix.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 13,
+  "title": "The Lord of the Rings: The Two Towers",
+  "year": 2002,
+  "genre": [
+    "Adventure",
+    "Drama",
+    "Fantasy"
+  ],
+  "rating": 8.7,
+  "director": "Peter Jackson",
+  "actors": [
+    "Elijah Wood",
+    "Ian McKellen",
+    "Viggo Mortensen"
+  ],
+  "plot": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
+  "poster": "",
+  "trailer": "https://youtu.be/LbfMDwc4azU?si=5mj4M08iEX7VW8rx",
+  "runtime": 179,
+  "awards": "Won 2 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$951.2 million",
+  "views": 951294432,
+  "production": "New Line Cinema",
+  "website": "https://www.lordoftherings.net/film/the-two-towers",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Lord_of_the_Rings_The_Two_Towers.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 8,
+  "title": "The Lord of the Rings: The Return of the King",
+  "year": 2003,
+  "genre": [
+    "Adventure",
+    "Drama",
+    "Fantasy"
+  ],
+  "rating": 8.9,
+  "director": "Peter Jackson",
+  "actors": [
+    "Elijah Wood",
+    "Viggo Mortensen",
+    "Ian McKellen"
+  ],
+  "plot": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+  "poster": "",
+  "trailer": "https://youtu.be/LbfMDwc4azU?si=5mj4M08iEX7VW8rx",
+  "runtime": 201,
+  "awards": "Won 11 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$1.142 billion",
+  "views": 1142283352,
+  "production": "New Line Cinema",
+  "website": "https://www.lordoftherings.net/film/the-return-of-the-king",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Lord_of_the_Rings_The_Return_of_the_King.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 20,
+  "title": "The Lion King",
+  "year": 1994,
+  "genre": [
+    "Animation",
+    "Adventure",
+    "Drama"
+  ],
+  "rating": 8.5,
+  "director": "Roger Allers, Rob Minkoff",
+  "actors": [
+    "Matthew Broderick",
+    "Jeremy Irons",
+    "James Earl Jones"
+  ],
+  "plot": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+  "poster": "",
+  "trailer": "https://youtu.be/lFzVJEksoDY",
+  "runtime": 88,
+  "awards": "Won 2 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$968.5 million",
+  "views": 968583023,
+  "production": "Walt Disney Pictures",
+  "website": "https://movies.disney.com/the-lion-king",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Lion_King.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 2,
+  "title": "The Godfather",
+  "year": 1972,
+  "genre": [
+    "Crime",
+    "Drama"
+  ],
+  "rating": 9.2,
+  "director": "Francis Ford Coppola",
+  "actors": [
+    "Marlon Brando",
+    "Al Pacino",
+    "James Caan"
+  ],
+  "plot": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+  "poster": "",
+  "trailer": "https://youtu.be/1x0GpEZnwa8",
+  "runtime": 175,
+  "awards": "Won 3 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$245.1 million",
+  "views": 245193321,
+  "production": "Paramount Pictures",
+  "website": "https://www.paramountmovies.com/movies/the-godfather",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Godfather.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 15,
+  "title": "The Departed",
+  "year": 2006,
+  "genre": [
+    "Crime",
+    "Drama",
+    "Thriller"
+  ],
+  "rating": 8.5,
+  "director": "Martin Scorsese",
+  "actors": [
+    "Leonardo DiCaprio",
+    "Matt Damon",
+    "Jack Nicholson"
+  ],
+  "plot": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+  "poster": "",
+  "trailer": "https://youtu.be/iojhqm0JTW4",
+  "runtime": 151,
+  "awards": "Won 4 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$289.8 million",
+  "views": 289823392,
+  "production": "Warner Bros. Pictures",
+  "website": "https://www.warnerbros.com/movies/departed",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Departed.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 9,
+  "title": "The Dark Knight Rises",
+  "year": 2012,
+  "genre": [
+    "Action",
+    "Thriller"
+  ],
+  "rating": 8.4,
+  "director": "Christopher Nolan",
+  "actors": [
+    "Christian Bale",
+    "Tom Hardy"
+  ],
+  "plot": "Eight years after the Joker's reign of anarchy, Batman is forced out of retirement to save Gotham City from the brutal guerrilla terrorist Bane.",
+  "poster": "",
+  "trailer": "https://youtu.be/z5Humz3ONgk",
+  "runtime": 165,
+  "awards": "Nominated for 2 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$1.081 billion",
+  "views": 1081730027,
+  "production": "Warner Bros. Pictures",
+  "website": "http://www.warnerbros.com/movies/the-dark-knight-rises",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Dark_Knight_Rises.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 3,
+  "title": "The Dark Knight",
+  "year": 2008,
+  "genre": [
+    "Action",
+    "Crime",
+    "Drama"
+  ],
+  "rating": 9,
+  "director": "Christopher Nolan",
+  "actors": [
+    "Christian Bale",
+    "Heath Ledger",
+    "Gary Oldman"
+  ],
+  "plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+  "poster": "",
+  "trailer": "https://youtu.be/kmJLuwP3MbY",
+  "runtime": 152,
+  "awards": "Won 2 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$1.005 billion",
+  "views": 100583957,
+  "production": "Warner Bros. Pictures",
+  "website": "https://www.warnerbros.com/movies/dark-knight",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Dark_Knight.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 19,
+  "title": "The Avengers",
+  "year": 2012,
+  "genre": [
+    "Action",
+    "Adventure",
+    "Sci-Fi"
+  ],
+  "rating": 8,
+  "director": "Joss Whedon",
+  "actors": [
+    "Robert Downey Jr.",
+    "Chris Evans",
+    "Mark Ruffalo"
+  ],
+  "plot": "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+  "poster": "",
+  "trailer": "https://youtu.be/eOrNdBpGMv8?si=nFBITsf_Op3gzcRQ",
+  "runtime": 143,
+  "awards": "Nominated for 1 Oscar",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$1.518 billion",
+  "views": 1518987234,
+  "production": "Marvel Studios",
+  "website": "https://www.marvel.com/movies/the-avengers",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Avengers.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 16,
+  "title": "Saving Private Ryan",
+  "year": 1998,
+  "genre": [
+    "Drama",
+    "War"
+  ],
+  "rating": 8.6,
+  "director": "Steven Spielberg",
+  "actors": [
+    "Tom Hanks",
+    "Matt Damon",
+    "Tom Sizemore"
+  ],
+  "plot": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+  "poster": "",
+  "trailer": "https://youtu.be/RYExstiQlLc",
+  "runtime": 169,
+  "awards": "Won 5 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$482.3 million",
+  "views": 482384832,
+  "production": "DreamWorks Pictures",
+  "website": "https://www.dreamworks.com/movies/saving-private-ryan",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Saving_Private_Ryan.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 4,
+  "title": "Pulp Fiction",
+  "year": 1994,
+  "genre": [
+    "Crime",
+    "Drama"
+  ],
+  "rating": 8.9,
+  "director": "Quentin Tarantino",
+  "actors": [
+    "John Travolta",
+    "Uma Thurman",
+    "Samuel L. Jackson"
+  ],
+  "plot": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+  "poster": "",
+  "trailer": "https://youtu.be/tGpTpVyI_OQ",
+  "runtime": 154,
+  "awards": "Won 1 Oscar",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$213.9 million",
+  "views": 213924823,
+  "production": "Miramax Films",
+  "website": "https://www.miramax.com/movie/pulp-fiction",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Pulp_Fiction.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 10,
+  "title": "Interstellar",
+  "year": 2014,
+  "genre": [
+    "Adventure",
+    "Drama",
+    "Sci-Fi"
+  ],
+  "rating": 8.6,
+  "director": "Christopher Nolan",
+  "actors": [
+    "Matthew McConaughey",
+    "Anne Hathaway"
+  ],
+  "plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+  "poster": "",
+  "trailer": "https://youtu.be/zSWdZVtXT7E?si=DIP8It4Sqg8QLKxm",
+  "runtime": 169,
+  "awards": "Won 1 Oscar",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$677.5 million",
+  "views": 677532019,
+  "production": "Paramount Pictures",
+  "website": "http://www.paramount.com/movies/interstellar",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Interstellar.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 6,
+  "title": "Inception",
+  "year": 2010,
+  "genre": [
+    "Action",
+    "Adventure",
+    "Sci-Fi"
+  ],
+  "rating": 8.8,
+  "director": "Christopher Nolan",
+  "actors": [
+    "Leonardo DiCaprio",
+    "Joseph Gordon-Levitt",
+    "Ellen Page"
+  ],
+  "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+  "poster": "",
+  "trailer": "https://youtu.be/mpj9dL7swwk",
+  "runtime": 148,
+  "awards": "Won 4 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$829.9 million",
+  "views": 829976839,
+  "production": "Warner Bros. Pictures",
+  "website": "https://www.warnerbros.com/movies/inception",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Inception.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 18,
+  "title": "Glory",
+  "year": 1989,
+  "genre": [
+    "Drama",
+    "History",
+    "War"
+  ],
+  "rating": 7.8,
+  "director": "Edward Zwick",
+  "actors": [
+    "Matthew Broderick",
+    "Denzel Washington",
+    "Cary Elwes"
+  ],
+  "plot": "Robert Gould Shaw leads the U.S. Civil War's first all-black volunteer company, fighting prejudices from both his own Union Army and the Confederates.",
+  "poster": "",
+  "trailer": "https://youtu.be/0hVrYRqeT5M",
+  "runtime": 122,
+  "awards": "Won 3 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$26.8 million",
+  "views": 26839123,
+  "production": "TriStar Pictures",
+  "website": "https://www.sonypictures.com/movies/glory",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Glory.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 12,
+  "title": "Gladiator",
+  "year": 2000,
+  "genre": [
+    "Action",
+    "Adventure",
+    "Drama"
+  ],
+  "rating": 8.5,
+  "director": "Ridley Scott",
+  "actors": [
+    "Russell Crowe",
+    "Joaquin Phoenix",
+    "Connie Nielsen"
+  ],
+  "plot": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+  "poster": "",
+  "trailer": "https://youtu.be/owK1qxDselE",
+  "runtime": 155,
+  "awards": "Won 5 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$460.5 million",
+  "views": 460589749,
+  "production": "DreamWorks Pictures",
+  "website": "https://www.dreamworks.com/movies/gladiator",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Gladiator.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 5,
+  "title": "Forrest Gump",
+  "year": 1994,
+  "genre": [
+    "Drama",
+    "Romance"
+  ],
+  "rating": 8.8,
+  "director": "Robert Zemeckis",
+  "actors": [
+    "Tom Hanks",
+    "Robin Wright",
+    "Gary Sinise"
+  ],
+  "plot": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold through the perspective of an Alabama man with an IQ of 75.",
+  "poster": "",
+  "trailer": "https://youtu.be/bLvqoHBptjg",
+  "runtime": 142,
+  "awards": "Won 6 Oscars",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$677.9 million",
+  "views": 677947927,
+  "production": "Paramount Pictures",
+  "website": "https://www.paramountmovies.com/movies/forrest-gump",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Forrest_Gump.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 11,
+  "title": "Fight Club",
+  "year": 1999,
+  "genre": [
+    "Drama"
+  ],
+  "rating": 8.8,
+  "director": "David Fincher",
+  "actors": [
+    "Brad Pitt",
+    "Edward Norton",
+    "Helena Bonham Carter"
+  ],
+  "plot": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+  "poster": "",
+  "trailer": "https://youtu.be/BdJKm16Co6M",
+  "runtime": 139,
+  "awards": "Nominated for 1 Oscar",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$100.9 million",
+  "views": 100946927,
+  "production": "20th Century Fox",
+  "website": "https://www.foxmovies.com/movies/fight-club",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Fight_Club.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 21,
+  "title": "Venom: The Last Dance",
+  "year": 2024,
+  "genre": [
+    "Action",
+    "Adventure",
+    "Sci-Fi"
+  ],
+  "rating": 6.8,
+  "director": "Kelly Marcel",
+  "actors": [
+    "Chiwetel Ejiofor",
+    "Juno Temple",
+    "Tom Hardy"
+  ],
+  "plot": "Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddie's last dance.",
+  "poster": "",
+  "trailer": "https://youtu.be/041KTRpr0XU",
+  "runtime": 118,
+  "awards": "Nominated for a 2025 Saturn Award for Best Science Fiction Film",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$333.7 million",
+  "views": 333782948,
+  "production": "Marvel Entertainment",
+  "website": "https://www.imdb.com/title/tt16366836/?ref_=fn_all_ttl_1",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Venom_The_Last_Dance.jpg",
+  "quantity": 8,
+  "price": 100
+},
+{
+  "_id": 22,
+  "title": "Oppenheimer",
+  "year": 2023,
+  "genre": [
+    "Drama",
+    "History"
+  ],
+  "rating": 8.3,
+  "director": "Christopher Nolan",
+  "actors": [
+    "Cillian Murphy",
+    "Emily Blunt",
+    "Matt Damon"
+  ],
+  "plot": "The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.",
+  "poster": "",
+  "trailer": "https://youtu.be/uYPbbksJxIg?si=IO5dXJhpTj93d9zj",
+  "runtime": 246,
+  "awards": "2024 Winner Saturn Award Best Thriller Film",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$645.7 million",
+  "views": 645782948,
+  "production": "Universal Pictures",
+  "website": "https://www.imdb.com/title/tt15398776/?ref_=nv_sr_srsg_0_tt_5_nm_3_in_0_q_op",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Oppenheimer.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 23,
+  "title": "The Wolf of Wall Street",
+  "year": 2013,
+  "genre": [
+    "Comedy",
+    "Crime",
+    "Drama"
+  ],
+  "rating": 8.2,
+  "director": "Martin Scorsese",
+  "actors": [
+    "Leonardo DiCaprio",
+    "Jonah Hill",
+    "Margot Robbie"
+  ],
+  "plot": "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
+  "poster": "",
+  "trailer": "https://youtu.be/FzehIddnaWU",
+  "runtime": 102,
+  "awards": "2013 Nominee BSFC Award",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$289.9 million",
+  "views": 289982948,
+  "production": "Paramount Pictures",
+  "website": "https://www.imdb.com/title/tt0993846/?ref_=hm_tpks_tt_i_4_pd_tp1_pbr_ic",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Wolf_of_Wall_Street.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 24,
+  "title": "The Wild Robot",
+  "year": 2024,
+  "genre": [
+    "Animation",
+    "Family",
+    "Sci-Fi"
+  ],
+  "rating": 8.3,
+  "director": "Chris Sanders",
+  "actors": [
+    "Lupita Nyong'o",
+    "Pedro Pascal"
+  ],
+  "plot": "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
+  "poster": "",
+  "trailer": "https://youtu.be/67vbA5ZJdKQ?si=bJM1khZy7dR6WNFz",
+  "runtime": 124,
+  "awards": "2025 Nominee Saturn Award",
+  "country": "USA",
+  "language": "English",
+  "boxOffice": "$180.3 million",
+  "views": 180358023,
+  "production": "Universal Pictures",
+  "website": "https://www.imdb.com/title/tt29623480/?ref_=fea_em00071_11_title_sm",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\The_Wild_Robot.jpg",
+  "quantity": 10,
+  "price": 100
+},
+{
+  "_id": 25,
+  "title": "Alay Far From Home",
+  "year": 2024,
+  "genre": [
+    "Adventure",
+    "Comedy",
+    "Drama"
+  ],
+  "rating": 9,
+  "director": "I Kadek Fredly Sukrata",
+  "actors": [
+    "Rizky Alay Hermawan",
+    "Gitarivo",
+    "Yudha"
+  ],
+  "plot": "Alay goes far from home to go on an exciting adventure on Karbit Island",
+  "poster": "",
+  "trailer": "https://youtube.com/shorts/I6K9iunFnP8?si=auG3mm0kczksQdOT",
+  "runtime": 101,
+  "awards": "",
+  "country": "Indonesia",
+  "language": "Indonesia",
+  "boxOffice": "$12 million",
+  "views": 12946123,
+  "production": "D Picture",
+  "website": "https://github.com/aLieexe",
+  "filmpicturelocation": "G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Alay_Far_From_Home.jpg",
+  "quantity": 10,
+  "price": 100
+}]

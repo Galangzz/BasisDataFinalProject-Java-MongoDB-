@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "675afcbb83e7c64e68e4d32c"
+  },
+  "Name": "Fredly Sukrata",
+  "Gender": "L",
+  "ID": "23051204107",
+  "Email": "fredlysukrata@gmail.com",
+  "Password": "123",
+  "bookings": [
+    {
+      "title": "Venom: The Last Dance",
+      "quantity": 1,
+      "booking_time": "2024-12-12 22:25:47"
+    }
+  ]
+}]
