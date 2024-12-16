@@ -1,11 +1,26 @@
 package FinalManagement.View;
 
-import FinalManagement.Controller.Button;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.RenderingHints;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+import FinalManagement.Controller.Button;
 
 public class SignUpPage {
     private static JFrame frame;
@@ -104,9 +119,10 @@ public class SignUpPage {
         passwordField.setBounds(startX + 30, startY + inputHeight + spacing + 130, inputWidth, inputHeight);
 
 
-        JButton signUpButton = createRoundedButton("Sign Up", () ->
-                Button.handleSignUp(fullNameField.getText(), genderField.getText(), idField.getText(), emailField.getText(), String.valueOf(passwordField.getPassword()))
-        );
+        JButton signUpButton = createRoundedButton("Sign Up", () ->{
+            frame.dispose();
+            Button.handleSignUp(fullNameField.getText(), genderField.getText(), idField.getText(), emailField.getText(), String.valueOf(passwordField.getPassword()));
+        });
         signUpButton.setBounds(startX + 30, startY + inputHeight + spacing + 180, inputWidth, inputHeight);
 
         JLabel alreadyHaveAccountLabel = new JLabel("<HTML><U>Already have an account? Log in</U></HTML>");
