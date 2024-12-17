@@ -1,13 +1,34 @@
 package FinalManagement.View;
 
-import FinalManagement.Controller.Button;
-import FinalManagement.Controller.MongoDBFunction;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.RenderingHints;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.util.List;
+
+import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.JViewport;
+import javax.swing.SwingConstants;
+
+import FinalManagement.Controller.Button;
+import FinalManagement.Controller.MongoDBFunction;
 
 public class Menu {
     public static JFrame frame;
@@ -73,13 +94,16 @@ public class Menu {
 
         JButton yourBooking = createRoundedButton(Button::handleMenuToListRoomOrder
         );
-        yourBooking.setBounds(startX + 30, startY + spacing * 12, inputWidth, inputHeight);
+        yourBooking.setBounds(startX + 30, startY + spacing * 12, inputWidth - 100, inputHeight);
 
         JTextField filmNameInputField = createRoundedInputField();
-        filmNameInputField.setBounds(startX + 30, startY - 40, inputWidth, inputHeight);
+        filmNameInputField.setBounds(startX + 30, startY - 30, inputWidth, inputHeight);
+
+        JButton exitButton = createRoundedExit(Button::handleMenuToExit);
+        exitButton.setBounds(startX + 255, startY + spacing * 12, inputWidth - 223, inputHeight);
 
         JButton findButton = createRoundedButton();
-        findButton.setBounds(startX + 30, startY + inputHeight + spacing - 60, inputWidth, inputHeight);
+        findButton.setBounds(startX + 30, startY + inputHeight + spacing - 50, inputWidth, inputHeight);
         findButton.addMouseListener(new java.awt.event.MouseAdapter(){
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e){
@@ -94,6 +118,7 @@ public class Menu {
         rectanglePanel.add(findButton);
 
         rectanglePanel.add(yourBooking);
+        rectanglePanel.add(exitButton);
         displayFilmRecommendations();
         return rectanglePanel;
     }
@@ -155,6 +180,43 @@ public class Menu {
         button.setBorderPainted(false);
 
         button.setBackground(Color.DARK_GRAY);
+        button.setForeground(Color.WHITE);
+        button.setFont(new Font("Arial", Font.BOLD, 16));
+
+        button.addActionListener(e -> action.run());
+        return button;
+    }
+
+    private static JButton createRoundedExit(Runnable action) {
+        JButton button = new JButton("Exit") {
+            @Override
+            protected void paintComponent(Graphics g) {
+                Graphics2D g2d = (Graphics2D) g.create();
+                g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+                g2d.setColor(getBackground());
+                g2d.fillRoundRect(0, 0, getWidth(), getHeight(), 20, 20);
+                g2d.dispose();
+
+                super.paintComponent(g);
+            }
+
+            @Override
+            protected void paintBorder(Graphics g) {
+                Graphics2D g2d = (Graphics2D) g.create();
+                g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+                g2d.setColor(getForeground());
+                g2d.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, 20, 20);
+                g2d.dispose();
+            }
+        };
+
+        button.setContentAreaFilled(false);
+        button.setOpaque(false);
+        button.setFocusPainted(false);
+        button.setBorderPainted(false);
+
+        button.setBackground(new Color(204, 51, 0));
         button.setForeground(Color.WHITE);
         button.setFont(new Font("Arial", Font.BOLD, 16));
 

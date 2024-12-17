@@ -1,10 +1,9 @@
 package FinalManagement.Controller;
 
-import FinalManagement.View.FilmSearchResultPage;
+import javax.swing.JOptionPane;
+
 import FinalManagement.View.ListFilmOrder;
 import FinalManagement.View.LogInPage;
-
-import javax.swing.*;
 import static FinalManagement.View.Menu.frame;
 
 public class Button {
@@ -29,5 +28,12 @@ public class Button {
         frame.dispose();
         ListFilmOrder listFilmOrder = new ListFilmOrder(mongoDBFunction.getOrderedRoomsByCustomer());
         listFilmOrder.showFrame();
+    }
+
+    public static void handleMenuToExit(){
+        frame.dispose();
+        JOptionPane.showMessageDialog(null, "Goodbye !!! \nHave a Nice Day", "See You Later", JOptionPane.INFORMATION_MESSAGE);
+        LogInPage logInPage = new LogInPage();
+        logInPage.showFrame();
     }
 }
