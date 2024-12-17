@@ -120,17 +120,19 @@ public class SignUpPage {
 
 
         JButton signUpButton = createRoundedButton("Sign Up", () ->{
-            frame.dispose();
-            Button.handleSignUp(fullNameField.getText(), genderField.getText(), idField.getText(), emailField.getText(), String.valueOf(passwordField.getPassword()));
+            if (Button.handleSignUp(fullNameField.getText(), genderField.getText(), idField.getText(), emailField.getText(), String.valueOf(passwordField.getPassword()))) 
+            {
+                frame.dispose();
+            }
         });
         signUpButton.setBounds(startX + 30, startY + inputHeight + spacing + 180, inputWidth, inputHeight);
 
         JLabel alreadyHaveAccountLabel = new JLabel("<HTML><U>Already have an account? Log in</U></HTML>");
         alreadyHaveAccountLabel.setFont(new Font("Arial", Font.PLAIN, 14));
         alreadyHaveAccountLabel.setForeground(Color.lightGray);
-        alreadyHaveAccountLabel.setBounds(startX + 30, startY + inputHeight + spacing + 220, inputWidth, 20);
+        alreadyHaveAccountLabel.setBounds(startX + 75, startY + inputHeight + spacing + 220, inputWidth - 95, 20);
         alreadyHaveAccountLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-
+        alreadyHaveAccountLabel.setHorizontalAlignment(SwingConstants.CENTER);
         alreadyHaveAccountLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
