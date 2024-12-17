@@ -97,7 +97,7 @@ public class Menu {
         yourBooking.setBounds(startX + 30, startY + spacing * 12, inputWidth - 100, inputHeight);
 
         JTextField filmNameInputField = createRoundedInputField();
-        filmNameInputField.setBounds(startX + 30, startY - 30, inputWidth, inputHeight);
+        filmNameInputField.setBounds(startX + 30, startY - 30, inputWidth, inputHeight - 5);
 
         JButton exitButton = createRoundedExit(Button::handleMenuToExit);
         exitButton.setBounds(startX + 255, startY + spacing * 12, inputWidth - 223, inputHeight);

@@ -116,7 +116,11 @@ public class CancelBooking {
         confirmButton.setBounds(startX + 30, bigRectHeight - 80, 120, 40);
         rectanglePanel.add(confirmButton);
 
-        JButton cancelButton = createRoundedButton("Cancel", frame::dispose);
+        JButton cancelButton = createRoundedButton("Cancel", () -> {
+            frame.dispose();
+            Menu menu = new Menu();
+            menu.showFrame();
+        });
         cancelButton.setBounds(startX + 170, bigRectHeight - 80, 120, 40);
         rectanglePanel.add(cancelButton);
 
