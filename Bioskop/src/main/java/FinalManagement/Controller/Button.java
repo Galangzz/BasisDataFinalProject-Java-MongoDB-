@@ -9,14 +9,16 @@ import static FinalManagement.View.Menu.frame;
 public class Button {
     private static final MongoDBFunction mongoDBFunction = new MongoDBFunction();
 
-    public static void handleSignUp(String fullName, String gender, String id, String email, String password) {
+    public static boolean  handleSignUp(String fullName, String gender, String id, String email, String password) {
         if (fullName.isEmpty() || gender.isEmpty() || id.isEmpty() || email.isEmpty() || password.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
+            return false;
         } else {
             mongoDBFunction.userSignUp(fullName, gender, id, email, password);
             JOptionPane.showMessageDialog(null, "Sign Up Successful! \nPlease login", "Success", JOptionPane.INFORMATION_MESSAGE);
             LogInPage logInPage = new LogInPage();
             logInPage.showFrame();
+            return true;
         }
     }
 
