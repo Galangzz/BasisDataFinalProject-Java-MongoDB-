@@ -1,11 +1,26 @@
 package FinalManagement.View;
 
-import FinalManagement.Controller.Button;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.RenderingHints;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+import FinalManagement.Controller.Button;
 
 public class LogInPage {
     public static JFrame frame;
@@ -73,7 +88,7 @@ public class LogInPage {
         emailLabel.setBounds(startX + 30, startY - 30, inputWidth, 20);
 
         JTextField emailField = createRoundedInputField();
-        emailField.setBounds(startX + 30, startY, inputWidth, inputHeight);
+        emailField.setBounds(startX + 30, startY + 1, inputWidth, inputHeight);
 
         JLabel passwordLabel = new JLabel("Password");
         passwordLabel.setFont(new Font("Arial", Font.PLAIN, 16));
@@ -85,13 +100,14 @@ public class LogInPage {
         JButton loginButton = createRoundedButton(() ->
                 Button.handleLogin(emailField.getText(), String.valueOf(passwordField.getPassword()))
         );
-        loginButton.setBounds(startX + 30, startY + inputHeight + spacing + 70, inputWidth, inputHeight);
+        loginButton.setBounds(startX + 30, startY + inputHeight + spacing + 90, inputWidth, inputHeight);
 
         JLabel alreadyHaveAccountLabel = new JLabel("<HTML><U>Doesn't have an account? Sign Up</U></HTML>");
         alreadyHaveAccountLabel.setFont(new Font("Arial", Font.PLAIN, 14));
         alreadyHaveAccountLabel.setForeground(Color.lightGray);
-        alreadyHaveAccountLabel.setBounds(startX + 30, startY + inputHeight + spacing + 120, inputWidth, 20);
+        alreadyHaveAccountLabel.setBounds(startX + 75, startY + inputHeight + spacing + 135, inputWidth - 95, 20);
         alreadyHaveAccountLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        alreadyHaveAccountLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         alreadyHaveAccountLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
