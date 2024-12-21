@@ -36,12 +36,12 @@ public class LogInPage {
         frame.setResizable(false);
         frame.setSize(480, 800);
 
-        ImageIcon iconTopLeft = new ImageIcon("G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
+        ImageIcon iconTopLeft = new ImageIcon("D:\\VSC\\Visual Studio Cde\\Java\\JavaSE\\TUGAS 16 (Final Task)\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
         frame.setIconImage(iconTopLeft.getImage());
 
         frame.getContentPane().setBackground(Color.lightGray);
 
-        ImageIcon originalIcon = new ImageIcon("G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
+        ImageIcon originalIcon = new ImageIcon("D:\\VSC\\Visual Studio Cde\\Java\\JavaSE\\TUGAS 16 (Final Task)\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
         Image originalImage = originalIcon.getImage();
 
         int desiredWidth = 75;
@@ -98,8 +98,8 @@ public class LogInPage {
         passwordField.setBounds(startX + 30, startY + inputHeight + spacing + 20, inputWidth, inputHeight);
 
         JButton loginButton = createRoundedButton(() ->
-                Button.handleLogin(emailField.getText(), String.valueOf(passwordField.getPassword()))
-        );
+            Button.handleLogin(emailField.getText(), String.valueOf(passwordField.getPassword()))
+            );
         loginButton.setBounds(startX + 30, startY + inputHeight + spacing + 90, inputWidth, inputHeight);
 
         JLabel alreadyHaveAccountLabel = new JLabel("<HTML><U>Doesn't have an account? Sign Up</U></HTML>");
@@ -108,7 +108,6 @@ public class LogInPage {
         alreadyHaveAccountLabel.setBounds(startX + 75, startY + inputHeight + spacing + 135, inputWidth - 95, 20);
         alreadyHaveAccountLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         alreadyHaveAccountLabel.setHorizontalAlignment(SwingConstants.CENTER);
-
         alreadyHaveAccountLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
@@ -188,6 +187,8 @@ public class LogInPage {
                 g2d.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, 20, 20);
                 g2d.dispose();
             }
+
+            
         };
 
         button.setContentAreaFilled(false);

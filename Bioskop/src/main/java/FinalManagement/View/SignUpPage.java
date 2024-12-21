@@ -36,12 +36,12 @@ public class SignUpPage {
         frame.setResizable(false);
         frame.setSize(480, 800);
 
-        ImageIcon iconTopLeft = new ImageIcon("G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
+        ImageIcon iconTopLeft = new ImageIcon("D:\\VSC\\Visual Studio Cde\\Java\\JavaSE\\TUGAS 16 (Final Task)\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
         frame.setIconImage(iconTopLeft.getImage());
 
         frame.getContentPane().setBackground(Color.lightGray);
 
-        ImageIcon originalIcon = new ImageIcon("G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
+        ImageIcon originalIcon = new ImageIcon("D:\\VSC\\Visual Studio Cde\\Java\\JavaSE\\TUGAS 16 (Final Task)\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
         Image originalImage = originalIcon.getImage();
 
         int desiredWidth = 75;
@@ -74,7 +74,7 @@ public class SignUpPage {
         JPanel rectanglePanel = getPanel();
 
         int bigRectWidth = 400;
-        int bigRectHeight = 850;
+        int bigRectHeight = 830;
 
         int inputWidth = 320;
         int inputHeight = 40;
@@ -120,8 +120,7 @@ public class SignUpPage {
 
 
         JButton signUpButton = createRoundedButton("Sign Up", () ->{
-            if (Button.handleSignUp(fullNameField.getText(), genderField.getText(), idField.getText(), emailField.getText(), String.valueOf(passwordField.getPassword()))) 
-            {
+            if (Button.handleSignUp(fullNameField.getText(), genderField.getText(), idField.getText(), emailField.getText(), String.valueOf(passwordField.getPassword()))) {
                 frame.dispose();
             }
         });

@@ -1,13 +1,18 @@
 package FinalManagement.Controller;
 
-import com.mongodb.client.*;
-import org.bson.Document;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import org.bson.Document;
+
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
+import com.mongodb.client.MongoDatabase;
+
 public class MongoDBBase {
-    protected static final String CONNECTION_STRING = "mongodb://localhost:27017";
+    protected static final String CONNECTION_STRING = "mongodb://localhost:27017/";
     protected static final String DATABASE_NAME = "BasisDataProject";
 
     protected MongoClient getMongoClient() {

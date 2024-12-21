@@ -1,9 +1,26 @@
 package FinalManagement.View;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Image;
+import java.awt.Insets;
+import java.awt.RenderingHints;
 import java.util.Collections;
 import java.util.List;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
 
 public class FilmDetails {
     private JFrame frame;
@@ -103,18 +120,19 @@ public class FilmDetails {
                 g2d.fillRoundRect(x, y, rectWidth, rectHeight, arcWidth, arcHeight);
             }
         };
-        rectanglePanel.setBounds(40, 100, 400, 600);
+        rectanglePanel.setBounds(40, 110, 400, 600);
         return rectanglePanel;
     }
 
     private JButton createRoomButton(String[] films) {
-        JButton button = new JButton("<html>" +
+        JButton button = new JButton("<html><div style='margin: 5px'>" +
                 "<b>" + films[0] + "</b>" + "<br>" +
                 " " + "<br>" +
                 "Rating: " + films[1] + "<br>" +
                 "Director: " + films[2] + "<br>" +
                 "Available: " + films[5] + "<br><br>" +
-                "Summary: <br>" + films [3] + "<br></html>") {
+                "Summary: <br>" + films [3] + "<br>"+ 
+                "</div></html>") {
             @Override
             protected void paintComponent(Graphics g) {
                 Graphics2D g2d = (Graphics2D) g.create();
@@ -133,7 +151,7 @@ public class FilmDetails {
                 g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
                 g2d.setColor(Color.lightGray);
-                g2d.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, 30, 30);
+                g2d.drawRoundRect(0, 1, getWidth() - 1, getHeight() - 2, 30, 30);
                 g2d.dispose();
             }
         };
@@ -145,18 +163,20 @@ public class FilmDetails {
         button.setFocusPainted(false);
         button.setBorderPainted(false);
         button.setPreferredSize(new Dimension(300, 375));
+        
         button.setHorizontalAlignment(SwingConstants.LEFT);
         button.setVerticalAlignment(SwingConstants.NORTH);
 
         if (films[4] != null && !films[4].isEmpty()) {
             ImageIcon filmImageIcon = new ImageIcon(films[4]);
             Image filmImage = filmImageIcon.getImage();
-            Image resizedFilmImage = filmImage.getScaledInstance(75, 75, Image.SCALE_SMOOTH);
+            Image resizedFilmImage = filmImage.getScaledInstance(110, 175, Image.SCALE_SMOOTH);
+            
             button.setIcon(new ImageIcon(resizedFilmImage));
         } else {
             button.setIcon(new ImageIcon("path/to/default/image.png"));
         }
-
+        
         button.addActionListener(e -> {
             frame.dispose();
             new ConfirmationBooking(Collections.singletonList(films));

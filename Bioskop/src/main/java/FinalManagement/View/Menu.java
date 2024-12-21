@@ -45,12 +45,12 @@ public class Menu {
         frame.setResizable(false);
         frame.setSize(480, 800);
 
-        ImageIcon iconTopLeft = new ImageIcon("G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
+        ImageIcon iconTopLeft = new ImageIcon("D:\\VSC\\Visual Studio Cde\\Java\\JavaSE\\TUGAS 16 (Final Task)\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
         frame.setIconImage(iconTopLeft.getImage());
 
         frame.getContentPane().setBackground(Color.lightGray);
 
-        ImageIcon originalIcon = new ImageIcon("G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
+        ImageIcon originalIcon = new ImageIcon("D:\\VSC\\Visual Studio Cde\\Java\\JavaSE\\TUGAS 16 (Final Task)\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
         Image originalImage = originalIcon.getImage();
 
         int desiredWidth = 75;
@@ -99,11 +99,12 @@ public class Menu {
         JTextField filmNameInputField = createRoundedInputField();
         filmNameInputField.setBounds(startX + 30, startY - 30, inputWidth, inputHeight - 5);
 
+        JButton findButton = createRoundedButton();
+        findButton.setBounds(startX + 30, startY + inputHeight + spacing - 50, inputWidth, inputHeight);
+        
         JButton exitButton = createRoundedExit(Button::handleMenuToExit);
         exitButton.setBounds(startX + 255, startY + spacing * 12, inputWidth - 223, inputHeight);
 
-        JButton findButton = createRoundedButton();
-        findButton.setBounds(startX + 30, startY + inputHeight + spacing - 50, inputWidth, inputHeight);
         findButton.addMouseListener(new java.awt.event.MouseAdapter(){
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e){
@@ -151,6 +152,7 @@ public class Menu {
     }
 
     private static JButton createRoundedButton(Runnable action) {
+        
         JButton button = new JButton("Your Booking") {
             @Override
             protected void paintComponent(Graphics g) {
@@ -172,8 +174,8 @@ public class Menu {
                 g2d.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, 20, 20);
                 g2d.dispose();
             }
+        
         };
-
         button.setContentAreaFilled(false);
         button.setOpaque(false);
         button.setFocusPainted(false);
@@ -305,6 +307,7 @@ public class Menu {
 
         return button;
     }
+    
 
     private static void displayFilmRecommendations() {
         List<String[]> recommendations = mongoDBFunction.filmFetchRecommendationData();
@@ -362,13 +365,13 @@ public class Menu {
 
             filmButton.addActionListener(e -> {
                 frame.dispose();
-
-                System.out.println("Film button clicked: " + title);
                 List<String[]> filmDetailsData;
                 frame.dispose();
                 filmDetailsData = mongoDBFunction.fetchFilmDetails(title);
                 FilmDetails filmDetails = new FilmDetails(filmDetailsData);
                 filmDetails.showFrame();
+                System.out.println("Film button clicked: " + title);
+                
             });
             recommendationsPanel.add(filmButton);
         }

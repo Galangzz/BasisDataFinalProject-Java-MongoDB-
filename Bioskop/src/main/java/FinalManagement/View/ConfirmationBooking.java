@@ -1,13 +1,26 @@
 package FinalManagement.View;
 
-import FinalManagement.Controller.MongoDBFunction;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.RenderingHints;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.util.Collections;
 import java.util.List;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+
+import FinalManagement.Controller.MongoDBFunction;
 
 public class ConfirmationBooking {
     public static JFrame frame;
@@ -61,49 +74,57 @@ public class ConfirmationBooking {
         String[] filmsDetails = films.getFirst();
         JLabel filmLabel = new JLabel(filmsDetails[0]);
         filmLabel.setFont(new Font("Arial", Font.PLAIN, 16));
-        filmLabel.setBounds(startX, startY + 5 * spacing, inputWidth, 20);
+        filmLabel.setBounds(startX, startY + 5 * spacing + 28, inputWidth, 20);
         rectanglePanel.add(filmLabel);
 
         JLabel ratingLabel = new JLabel("Rating: " + filmsDetails[1]);
         ratingLabel.setFont(new Font("Arial", Font.PLAIN, 16));
-        ratingLabel.setBounds(startX, startY + 6 * spacing, inputWidth, 20);
+        ratingLabel.setBounds(startX, startY + 6 * spacing + 28, inputWidth, 20);
         rectanglePanel.add(ratingLabel);
 
         JLabel priceLabel = new JLabel("Price: $" + filmsDetails[6]);
         priceLabel.setFont(new Font("Arial", Font.PLAIN, 16));
-        priceLabel.setBounds(startX, startY + 7 * spacing, inputWidth, 20);
+        priceLabel.setBounds(startX, startY + 7 * spacing + 28, inputWidth, 20);
         rectanglePanel.add(priceLabel);
 
         JLabel availabilityLabel = new JLabel("Available: " + filmsDetails[5]);
         availabilityLabel.setFont(new Font("Arial", Font.PLAIN, 16));
-        availabilityLabel.setBounds(startX, startY + 8 * spacing, inputWidth, 20);
+        availabilityLabel.setBounds(startX, startY + 8 * spacing + 28, inputWidth, 20);
         rectanglePanel.add(availabilityLabel);
 
         JLabel numberOfBooking = new JLabel("Quantity: ");
         numberOfBooking.setFont(new Font("Arial", Font.PLAIN, 16));
-        numberOfBooking.setBounds(startX, startY + 9 * spacing, inputWidth, 20);
+        numberOfBooking.setBounds(startX, startY + 9 * spacing + 28, inputWidth, 20);
         rectanglePanel.add(numberOfBooking);
 
         JTextField numberOfBook = createRoundedInputField();
-        numberOfBook.setBounds(startX, startY + 10 * spacing, inputWidth, 30);
+        numberOfBook.setBounds(startX + 70, startY + 9 * spacing + 28, inputWidth - 90, 25);
         rectanglePanel.add(numberOfBook);
 
         ImageIcon roomImageIcon = new ImageIcon(filmsDetails[4]);
-        Image roomImage = roomImageIcon.getImage().getScaledInstance(125, 125, Image.SCALE_SMOOTH);
+        Image roomImage = roomImageIcon.getImage().getScaledInstance(125, 175, Image.SCALE_SMOOTH);
         JLabel imageLabel = new JLabel(new ImageIcon(roomImage));
-        imageLabel.setBounds(140, 100, 125, 125);
+        imageLabel.setBounds(140, 80, 125, 175);
         rectanglePanel.add(imageLabel);
 
         JButton confirmButton = createRoundedButton("Confirm", () -> {
-            boolean updateSuccess = mongoDBFunction.updateAvailability(Collections.singletonList(filmsDetails), numberOfBook.getText());
-            if (updateSuccess) {
-                JOptionPane.showMessageDialog(frame, "Booking confirmed successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
-                mongoDBFunction.addBookingToUser();
-                frame.dispose();
-                Menu menu = new Menu();
-                menu.showFrame();
-            } else {
-                JOptionPane.showMessageDialog(frame, "Failed to confirm booking. Please try again.", "Error", JOptionPane.ERROR_MESSAGE);
+            int quantity = Integer.parseInt(numberOfBook.getText());
+            int availibleFilm = Integer.parseInt(filmsDetails[5]);
+            if(quantity <= 0 || quantity > availibleFilm){
+                JOptionPane.showMessageDialog(null, "Please enter a valid quantity");
+                numberOfBook.setText("");
+            }else{
+
+                boolean updateSuccess = mongoDBFunction.updateAvailability(Collections.singletonList(filmsDetails), numberOfBook.getText());
+                if (updateSuccess) {
+                    JOptionPane.showMessageDialog(frame, "Booking confirmed successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+                    mongoDBFunction.addBookingToUser();
+                    frame.dispose();
+                    Menu menu = new Menu();
+                    menu.showFrame();
+                } else {
+                    JOptionPane.showMessageDialog(frame, "Failed to confirm booking. Please try again.", "Error", JOptionPane.ERROR_MESSAGE);
+                }
             }
         });
         confirmButton.setBounds(startX + 30, bigRectHeight - 80, 120, 40);
@@ -112,7 +133,11 @@ public class ConfirmationBooking {
         confirmButton.setBounds(startX + 30, bigRectHeight - 80, 120, 40);
         rectanglePanel.add(confirmButton);
 
-        JButton cancelButton = createRoundedButton("Cancel", frame::dispose);
+        JButton cancelButton = createRoundedButton("Cancel",()->{
+            frame.dispose();
+            Menu menu = new Menu();
+            menu.showFrame();
+        });
         cancelButton.setBounds(startX + 170, bigRectHeight - 80, 120, 40);
         rectanglePanel.add(cancelButton);
 

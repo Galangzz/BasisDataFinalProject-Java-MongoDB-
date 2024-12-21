@@ -31,7 +31,6 @@ public class Button {
         ListFilmOrder listFilmOrder = new ListFilmOrder(mongoDBFunction.getOrderedRoomsByCustomer());
         listFilmOrder.showFrame();
     }
-
     public static void handleMenuToExit(){
         frame.dispose();
         JOptionPane.showMessageDialog(null, "Goodbye !!! \nHave a Nice Day", "See You Later", JOptionPane.INFORMATION_MESSAGE);
