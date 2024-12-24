@@ -14,11 +14,20 @@ public class Button {
             JOptionPane.showMessageDialog(null, "Please fill in all fields", "Error", JOptionPane.ERROR_MESSAGE);
             return false;
         } else {
-            mongoDBFunction.userSignUp(fullName, gender, id, email, password);
-            JOptionPane.showMessageDialog(null, "Sign Up Successful! \nPlease login", "Success", JOptionPane.INFORMATION_MESSAGE);
-            LogInPage logInPage = new LogInPage();
-            logInPage.showFrame();
-            return true;
+            if(mongoDBFunction.getSearchIDExist(id)){
+                JOptionPane.showMessageDialog(null, "ID already exist", "Error", JOptionPane.ERROR_MESSAGE);
+                return false;
+            }
+            if (mongoDBFunction.getSearchEmailExist(email)) {
+                JOptionPane.showMessageDialog(null, "Email already exists.", "Error", JOptionPane.ERROR_MESSAGE);
+                return false;
+            }else{
+                mongoDBFunction.userSignUp(fullName, gender, id, email, password);
+                JOptionPane.showMessageDialog(null, "Sign Up Successful! \nPlease login", "Success", JOptionPane.INFORMATION_MESSAGE);
+                LogInPage logInPage = new LogInPage();
+                logInPage.showFrame();
+                return true;
+            }
         }
     }
 
@@ -31,7 +40,6 @@ public class Button {
         ListFilmOrder listFilmOrder = new ListFilmOrder(mongoDBFunction.getOrderedRoomsByCustomer());
         listFilmOrder.showFrame();
     }
-
     public static void handleMenuToExit(){
         frame.dispose();
         JOptionPane.showMessageDialog(null, "Goodbye !!! \nHave a Nice Day", "See You Later", JOptionPane.INFORMATION_MESSAGE);

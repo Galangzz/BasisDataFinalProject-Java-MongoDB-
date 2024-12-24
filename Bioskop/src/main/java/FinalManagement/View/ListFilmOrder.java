@@ -1,10 +1,26 @@
 package FinalManagement.View;
 
-import FinalManagement.Controller.MongoDBFunction;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.RenderingHints;
 import java.util.List;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
+
+import FinalManagement.Controller.MongoDBFunction;
 
 public class ListFilmOrder {
     private JFrame frame;
@@ -22,7 +38,7 @@ public class ListFilmOrder {
         frame.setResizable(false);
         frame.setSize(480, 800);
 
-        ImageIcon iconTopLeft = new ImageIcon("G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
+        ImageIcon iconTopLeft = new ImageIcon("D:\\VSC\\Visual Studio Cde\\Java\\JavaSE\\TUGAS 16 (Final Task)\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
         frame.setIconImage(iconTopLeft.getImage());
 
         frame.getContentPane().setBackground(Color.lightGray);
@@ -112,10 +128,11 @@ public class ListFilmOrder {
     }
 
     private JButton createHotelButton(String[] films) {
-        JButton button = new JButton("<html>" +
+        JButton button = new JButton("<html><div style='margin: 10px;'>" +
                 "<b>" + films[0] + "</b><br>" +
                 "Quantity       : " + films[1] + "</b><br>" +
-                "Time Booking   : " + films[2]) {
+                "Time Booking   : " + films[2] + "<br>" +
+                "</div></html>") {
             @Override
             protected void paintComponent(Graphics g) {
                 Graphics2D g2d = (Graphics2D) g.create();
@@ -134,7 +151,7 @@ public class ListFilmOrder {
                 g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
                 g2d.setColor(Color.lightGray);
-                g2d.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, 30, 30);
+                g2d.drawRoundRect(0, 0, getWidth() - 2, getHeight() - 2, 30, 30);
                 g2d.dispose();
             }
         };
@@ -151,9 +168,11 @@ public class ListFilmOrder {
 
         button.addActionListener(e -> {
             List<String[]> filmDetailsData;
+
             frame.dispose();
             filmDetailsData = mongoDBFunction.fetchFilmDetails(films[0]);
-            CancelBooking cancelBooking = new CancelBooking(filmDetailsData);
+            int a = Integer.parseInt(films[1]);
+            CancelBooking cancelBooking = new CancelBooking(filmDetailsData, a);
             cancelBooking.showFrame();
         });
 

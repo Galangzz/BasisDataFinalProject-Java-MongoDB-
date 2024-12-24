@@ -1,10 +1,27 @@
 package FinalManagement.View;
 
-import FinalManagement.Controller.MongoDBFunction;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Image;
+import java.awt.Insets;
+import java.awt.RenderingHints;
 import java.util.List;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
+
+import FinalManagement.Controller.MongoDBFunction;
 
 public class FilmSearchResultPage {
     private JFrame frame;
@@ -22,7 +39,7 @@ public class FilmSearchResultPage {
         frame.setResizable(false);
         frame.setSize(480, 800);
 
-        ImageIcon iconTopLeft = new ImageIcon("G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
+        ImageIcon iconTopLeft = new ImageIcon("D:\\VSC\\Visual Studio Cde\\Java\\JavaSE\\TUGAS 16 (Final Task)\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
         frame.setIconImage(iconTopLeft.getImage());
 
         frame.getContentPane().setBackground(Color.lightGray);
@@ -146,7 +163,7 @@ public class FilmSearchResultPage {
         button.setFocusPainted(false);
         button.setBorderPainted(false);
 
-        button.setPreferredSize(new Dimension(375, 100));
+        button.setPreferredSize(new Dimension(355, 100));
         button.setHorizontalAlignment(SwingConstants.LEFT);
         button.setVerticalAlignment(SwingConstants.CENTER);
         ImageIcon pathHotelPicture = new ImageIcon(mongoDBFunction.pathFilmPicture(film[0]));
