@@ -23,11 +23,14 @@ public class MongoDBBase {
         return mongoClient.getDatabase(DATABASE_NAME);
     }
 
-    protected List<Document> findDocuments(String collectionName, Document filter) {
+    protected List<Document> findDocuments(String collectionName, Document filter, Document sort) {
         List<Document> documents = new ArrayList<>();
         try (MongoClient mongoClient = getMongoClient()) {
             MongoCollection<Document> collection = getDatabase(mongoClient).getCollection(collectionName);
-            try (MongoCursor<Document> cursor = collection.find(filter).iterator()) {
+            if (sort == null) {
+                sort = new Document("_id", 1);
+            }
+            try (MongoCursor<Document> cursor = collection.find(filter).sort(sort).iterator()) {
                 while (cursor.hasNext()) {
                     documents.add(cursor.next());
                 }

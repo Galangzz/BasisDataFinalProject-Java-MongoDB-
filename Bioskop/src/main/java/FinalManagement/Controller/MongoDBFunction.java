@@ -1,13 +1,14 @@
 package FinalManagement.Controller;
 
-import FinalManagement.View.Menu;
-import org.bson.Document;
-
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
+import org.bson.Document;
+
 import static FinalManagement.View.LogInPage.frame;
+import FinalManagement.View.Menu;
 
 public class MongoDBFunction extends MongoDBBase {
     private static String loggedEmail;
@@ -35,6 +36,28 @@ public class MongoDBFunction extends MongoDBBase {
         insertDocument("User", newUser);
     }
 
+    public boolean getSearchEmailExist(String email) {
+        Document filter = new Document("Email", email);
+        Document userFind = findFirstDocument("User", filter);
+        if (userFind != null) {
+            System.out.println("Email already exists.");
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean getSearchIDExist(String id) {
+        Document filter = new Document("ID", id);
+        Document userFind = findFirstDocument("User", filter);
+        if (userFind != null) {
+            System.out.println("ID already exists.");
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public void userLogIn(String email, String password) {
         Document filter = new Document("Email", email).append("Password", password);
         Document userFind = findFirstDocument("User", filter);
@@ -52,8 +75,8 @@ public class MongoDBFunction extends MongoDBBase {
 
     public List<String[]> fetchFilmData(String filmName) {
         Document filter = new Document("title", new Document("$regex", ".*" + filmName + ".*").append("$options", "i"));
-
-        List<Document> documents = findDocuments("movie", filter);
+        Document sort = new Document("title", 1);
+        List<Document> documents = findDocuments("movie", filter, sort);
 
         List<String[]> films = new ArrayList<>();
 
@@ -70,10 +93,10 @@ public class MongoDBFunction extends MongoDBBase {
     }
 
     public List<String[]> filmFetchRecommendationData() {
-        Document filter = new Document("year", new Document("$gte", 2023))
-                .append("rating", new Document("$gte", 8));
+        Document filter = new Document("year", new Document("$gte", 2023)).append("rating", new Document("$gte", 8));
+        Document sort = new Document("rating", -1); 
 
-        List<Document> documents = findDocuments("movie", filter);
+        List<Document> documents = findDocuments("movie", filter, sort);
         List<String[]> movies = new ArrayList<>();
 
         for (Document doc : documents) {
@@ -99,8 +122,8 @@ public class MongoDBFunction extends MongoDBBase {
 
     public List<String[]> fetchFilmDetails(String filmName) {
         Document filter = new Document("title", new Document("$regex", ".*" + filmName + ".*").append("$options", "i"));
-
-        List<Document> documents = findDocuments("movie", filter);
+        Document sort = new Document("title", 1);
+        List<Document> documents = findDocuments("movie", filter, sort);
 
         List<String[]> films = new ArrayList<>();
 
