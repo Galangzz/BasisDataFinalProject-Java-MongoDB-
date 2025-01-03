@@ -301,6 +301,7 @@ public class MongoDBFunction extends MongoDBBase {
     
             int cancelQuantity = Integer.parseInt(numberFilmBookedCancel);
             List<Document> bookings = user.getList("bookings", Document.class, new ArrayList<>());
+            List<Document> canceledBookings = user.getList("cancelbooking", Document.class, new ArrayList<>());
     
             boolean bookingExists = false;
     
@@ -317,38 +318,49 @@ public class MongoDBFunction extends MongoDBBase {
                     if (updatedFilmsBooked == 0) {
                         Document pullOperation = new Document("$pull", new Document("bookings", new Document("title", chosenFilm)));
                         updateDocument("User", userFilter, pullOperation);
-    
-                        Document canceledBooking = new Document()
-                                .append("title", chosenFilm)
-                                .append("quantity", existingFilmBooked)
-                                .append("cancel_time", timestamp);
-    
-                        Document pushCancelOperation = new Document("$push", new Document("cancelbooking", canceledBooking));
-                        updateDocument("User", userFilter, pushCancelOperation);
-    
-                        System.out.println("Booking canceled and moved to cancelbooking.");
                     } else {
                         Document updateFilter = new Document("Email", loggedEmail)
                                 .append("bookings.title", chosenFilm);
     
                         Document updateOperation = new Document("$set", new Document("bookings.$.quantity", updatedFilmsBooked));
                         updateDocument("User", updateFilter, updateOperation);
-    
-                        Document canceledBooking = new Document()
-                                .append("title", chosenFilm)
-                                .append("quantity", cancelQuantity)
-                                .append("cancel_time", timestamp);
-    
-                        Document pushCancelOperation = new Document("$push", new Document("cancelbooking", canceledBooking));
-                        updateDocument("User", userFilter, pushCancelOperation);
-    
-                        System.out.println("Updated booking with reduced quantity and recorded cancellation.");
                     }
     
+                    boolean cancelExists = false;
+                    for (Document canceledBooking : canceledBookings) {
+                        if (canceledBooking.getString("title").equals(chosenFilm)) {
+                            int existingCanceledQuantity = canceledBooking.getInteger("quantity", 0);
+                            int updatedCanceledQuantity = existingCanceledQuantity + cancelQuantity;
+    
+                            Document updateCancelFilter = new Document("Email", loggedEmail)
+                                    .append("cancelbooking.title", chosenFilm);
+    
+                            Document updateCancelOperation = new Document("$set", new Document("cancelbooking.$.quantity", updatedCanceledQuantity)
+                                    .append("cancelbooking.$.last_cancel_time", timestamp));
+    
+                            updateDocument("User", updateCancelFilter, updateCancelOperation);
+                            cancelExists = true;
+                            break;
+                        }
+                    }
+    
+                    if (!cancelExists) {
+                        Document newCancelBooking = new Document()
+                                .append("title", chosenFilm)
+                                .append("quantity", cancelQuantity)
+                                .append("first_cancel_time", timestamp)
+                                .append("last_cancel_time", timestamp);
+    
+                        Document pushCancelOperation = new Document("$push", new Document("cancelbooking", newCancelBooking));
+                        updateDocument("User", userFilter, pushCancelOperation);
+                    }
+    
+                    System.out.println("Cancellation processed successfully.");
                     bookingExists = true;
                     break;
                 }
             }
+    
             if (!bookingExists) {
                 System.err.println("Booking not found for the specified title.");
             }
@@ -360,7 +372,5 @@ public class MongoDBFunction extends MongoDBBase {
             System.err.println("Failed to process booking cancellation.");
             e.printStackTrace();
         }
-    }
-    
-
+    }    
 }
