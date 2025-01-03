@@ -36,12 +36,12 @@ public class LogInPage {
         frame.setResizable(false);
         frame.setSize(480, 800);
 
-        ImageIcon iconTopLeft = new ImageIcon("D:\\VSC\\Visual Studio Cde\\Java\\JavaSE\\TUGAS 16 (Final Task)\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
+        ImageIcon iconTopLeft = new ImageIcon("G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\BasisDataFinalProject-Java-MongoDB-\\Bioskop\\src\\Cinema_XXI.png");
         frame.setIconImage(iconTopLeft.getImage());
 
         frame.getContentPane().setBackground(Color.lightGray);
 
-        ImageIcon originalIcon = new ImageIcon("D:\\VSC\\Visual Studio Cde\\Java\\JavaSE\\TUGAS 16 (Final Task)\\TUGAS 16 (Final Task)\\Bioskop\\src\\Cinema_XXI.png");
+        ImageIcon originalIcon = new ImageIcon("G:\\My Drive\\1 Fredly Sukrata\\1 Kuliah\\Semester 3\\2 Tugas Kuliah\\Basis Data\\BasisDataFinalProject-Java-MongoDB-\\Bioskop\\src\\Cinema_XXI.png");
         Image originalImage = originalIcon.getImage();
 
         int desiredWidth = 75;

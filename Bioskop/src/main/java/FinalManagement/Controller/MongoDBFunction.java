@@ -289,63 +289,70 @@ public class MongoDBFunction extends MongoDBBase {
 
     public void cancelBookingFromUser(String numberFilmBookedCancel) {
         String timestamp = BookingTimestampHandler.getTimestamp();
-
+    
         try {
             Document userFilter = new Document("Email", loggedEmail);
             Document user = findFirstDocument("User", userFilter);
-
+    
             if (user == null) {
                 System.err.println("User not found.");
                 return;
             }
-
+    
             int cancelQuantity = Integer.parseInt(numberFilmBookedCancel);
             List<Document> bookings = user.getList("bookings", Document.class, new ArrayList<>());
-
+    
             boolean bookingExists = false;
-
+    
             for (Document booking : bookings) {
                 if (booking.getString("title").equals(chosenFilm)) {
                     int existingFilmBooked = booking.getInteger("quantity", 0);
                     int updatedFilmsBooked = existingFilmBooked - cancelQuantity;
-
+    
                     if (updatedFilmsBooked < 0) {
                         System.err.println("Error: Cancel quantity exceeds the booked quantity.");
                         return;
                     }
-
+    
                     if (updatedFilmsBooked == 0) {
                         Document pullOperation = new Document("$pull", new Document("bookings", new Document("title", chosenFilm)));
                         updateDocument("User", userFilter, pullOperation);
-
+    
                         Document canceledBooking = new Document()
                                 .append("title", chosenFilm)
                                 .append("quantity", existingFilmBooked)
                                 .append("cancel_time", timestamp);
-
+    
                         Document pushCancelOperation = new Document("$push", new Document("cancelbooking", canceledBooking));
                         updateDocument("User", userFilter, pushCancelOperation);
-
+    
                         System.out.println("Booking canceled and moved to cancelbooking.");
                     } else {
                         Document updateFilter = new Document("Email", loggedEmail)
                                 .append("bookings.title", chosenFilm);
-
+    
                         Document updateOperation = new Document("$set", new Document("bookings.$.quantity", updatedFilmsBooked));
                         updateDocument("User", updateFilter, updateOperation);
-
-                        System.out.println("Updated booking with reduced quantity.");
+    
+                        Document canceledBooking = new Document()
+                                .append("title", chosenFilm)
+                                .append("quantity", cancelQuantity)
+                                .append("cancel_time", timestamp);
+    
+                        Document pushCancelOperation = new Document("$push", new Document("cancelbooking", canceledBooking));
+                        updateDocument("User", userFilter, pushCancelOperation);
+    
+                        System.out.println("Updated booking with reduced quantity and recorded cancellation.");
                     }
-
+    
                     bookingExists = true;
                     break;
                 }
             }
-
             if (!bookingExists) {
                 System.err.println("Booking not found for the specified title.");
             }
-
+    
         } catch (NumberFormatException e) {
             System.err.println("Invalid number format for the booking quantity.");
             e.printStackTrace();
@@ -354,5 +361,6 @@ public class MongoDBFunction extends MongoDBBase {
             e.printStackTrace();
         }
     }
+    
 
 }
